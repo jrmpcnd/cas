@@ -7,14 +7,23 @@ class HomePage extends StatelessWidget {
   final String MaterialAppScaffoldbgcolor = "0xff470701";
   final String Scaffoldappbarbgcolor = "0xff470701";
   final String MaterialAppScaffoldAppbartitletext = "CAS";
+  final String networkImagelogo = "assets/images/logo.png";
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(int.parse(Scaffoldappbarbgcolor)),
-          title: Text(MaterialAppScaffoldAppbartitletext),
+      home: SafeArea(
+        child: Container(
+          child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: Color(int.parse(Scaffoldappbarbgcolor)),
+              title: Image.asset(
+                networkImagelogo,
+                height: 150,
+                width: 150,
+              ),
+            ),
+          ),
         ),
       ),
       debugShowCheckedModeBanner: showcheckedmodebanner,
