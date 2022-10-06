@@ -4,9 +4,9 @@ class HomePage extends StatelessWidget {
   // const HomePage({Key? key}) : super(key: key);
 
   final bool showcheckedmodebanner = false;
-  final String Appbartitle = "";
   final String MaterialAppScaffoldbgcolor = "0xff470701";
   final String Scaffoldappbarbgcolor = "0xff470701";
+  final String MaterialAppScaffoldAppbartitletext = "CAS";
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(int.parse(Scaffoldappbarbgcolor)),
-          title: Image,
+          title: Text(MaterialAppScaffoldAppbartitletext),
         ),
       ),
       debugShowCheckedModeBanner: showcheckedmodebanner,
